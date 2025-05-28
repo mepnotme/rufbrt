@@ -122,7 +122,7 @@ def screen_match():
             elif event.key == K_s and hero["state"] == "idle":  # Diagonal abajo-derecha
                 dest_hero_floor = hero["floor"] - 1
                 dest_hero_col = hero["col"] + 1
-            if (hero["floor"] != dest_hero_floor or hero["col"] != dest_hero_col) and cell_exists(dest_hero_floor,                                                                                  dest_hero_col):
+            if (hero["floor"] != dest_hero_floor or hero["col"] != dest_hero_col) and cell_exists(dest_hero_floor, dest_hero_col):
                 hero["dest_floor"] = dest_hero_floor
                 hero["dest_col"] = dest_hero_col
                 hero["state"] = "jumping"
