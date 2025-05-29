@@ -59,9 +59,9 @@ def screen_menu():
     draw_surface.fill((0, 0, 0))
     draw_surface.blit(menu_rufus_img, ((0, 0)))
     draw_surface.blit(menu_title_img, ((68, 9)))
-    draw_surface.blit(menu_subtitle_1_img, ((195, 160)))
-    draw_surface.blit(menu_subtitle_2_img, ((195, 170)))
-    draw_surface.blit(menu_subtitle_3_img, ((185, 180)))
+    draw_surface.blit(menu_subtitle_1_img, ((194, 162)))
+    draw_surface.blit(menu_subtitle_2_img, ((194, 172)))
+    draw_surface.blit(menu_subtitle_3_img, ((184, 182)))
 
 
 def coordinates_of_block(floor_number, col_number):
