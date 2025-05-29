@@ -57,8 +57,11 @@ def screen_menu():
                 screen = "match"
 
     draw_surface.fill((0, 0, 0))
-    draw_surface.blit(menu_title_img, ((WORLD_WIDTH - menu_title_img.get_width()) / 2, 100))
-    draw_surface.blit(menu_subtitle_img, ((WORLD_WIDTH - menu_subtitle_img.get_width()) / 2, 150))
+    draw_surface.blit(menu_rufus_img, ((0, 0)))
+    draw_surface.blit(menu_title_img, ((68, 9)))
+    draw_surface.blit(menu_subtitle_1_img, ((195, 160)))
+    draw_surface.blit(menu_subtitle_2_img, ((195, 170)))
+    draw_surface.blit(menu_subtitle_3_img, ((185, 180)))
 
 
 def coordinates_of_block(floor_number, col_number):
@@ -91,7 +94,7 @@ def draw_hero(hero):
         inc_x = (frame_counter - hero["state_init_counter"]) * (hero_dest_x - hero_x) / FRAMES_JUMPING
         inc_y = (frame_counter - hero["state_init_counter"]) * (hero_dest_y - hero_y) / FRAMES_JUMPING
         curve_y_inc = (1 - (1/(FRAMES_JUMPING / 2)) * fabs( frame_counter - hero["state_init_counter"] - 3)) * JUMP_HEIGHT
-        print(curve_y_inc)
+        #print(curve_y_inc)
     else:
         inc_x = 0
         inc_y = 0
@@ -147,11 +150,16 @@ scale_factor = get_new_scale_factor(int(pygame.display.Info().current_w * 0.7), 
 display_surface = pygame.display.set_mode((WORLD_WIDTH * scale_factor, WORLD_HEIGHT * scale_factor),  HWSURFACE | DOUBLEBUF | RESIZABLE)
 draw_surface = pygame.Surface((WORLD_WIDTH, WORLD_HEIGHT),  HWSURFACE | DOUBLEBUF)
 
-pygame.display.set_caption('rubrt')
+pygame.display.set_caption('rufbrt')
 font_title = pygame.font.Font("assets/daydream.ttf", 28)
-font_paragraph = pygame.font.Font("assets/daydream.ttf", 11)
-menu_title_img = font_title.render("rufbrt", False, (204, 96, 120))
-menu_subtitle_img = font_paragraph.render("press space to start", False, (116, 220, 188))
+font_paragraph = pygame.font.Font("assets/daydream.ttf", 8)
+menu_title_img = font_title.render("rufbrt", False, (240, 108, 124))
+menu_rufus_img = pygame.image.load("assets/start_menu.png")
+menu_subtitle_1_img = font_paragraph.render("press", False, (116, 220, 188))
+menu_subtitle_2_img = font_paragraph.render("space", False, (116, 220, 188))
+menu_subtitle_3_img = font_paragraph.render("to start", False, (116, 220, 188))
+
+
 block_img = pygame.image.load('assets/block_1.png')
 
 pyramid = []    # matriz que contiene información sobre todos los bloques del juego
