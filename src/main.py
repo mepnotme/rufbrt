@@ -83,8 +83,8 @@ def draw_pyramid():
             draw_block(x_block, y_block)
 
 
-def cell_exists(row, col):
-    return 0 <= row <= 6 and 0 <= col <= 6 - row
+def cell_exists(floor, col):
+    return 0 <= floor <= 6 and 0 <= col <= 6 - floor
 
 
 def draw_hero(hero):
