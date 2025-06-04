@@ -160,7 +160,7 @@ menu_subtitle_2_img = font_paragraph.render("space", False, (116, 220, 188))
 menu_subtitle_3_img = font_paragraph.render("to start", False, (116, 220, 188))
 
 
-block_img = pygame.image.load('assets/block_1.png')
+block_img = pygame.image.load('assets/block_2.png')
 
 pyramid = []    # matriz que contiene información sobre todos los bloques del juego
 hero = {
