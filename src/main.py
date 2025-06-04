@@ -177,7 +177,7 @@ def screen_match():
                 hero["death_timestamp"] = frame_counter
                 hero["state"] = "falling"
     elif hero["state"] == "falling":
-        hero["falling_y_dist"] += HERO_FALLING_SPEED
+        hero["falling_y_dist"] = hero["falling_y_dist"] * 1.03 + HERO_FALLING_SPEED
 
     if not playing:
         if frame_counter >= hero["death_timestamp"] + 60:
